@@ -22,7 +22,6 @@
         let pattern = 1;
         let rowscount = 5;
         document.onload = printpatterrn();
-
         function ChangePattern(pat) {
             if (pat < 1) {
                 pattern = 4;
@@ -38,35 +37,35 @@
 
         function printpatterrn() {
             let content = "";
-            const rows = parseFloat(rowscount);
-            const p = parseFloat(pattern);
+            const rows = rowscount;
+            const p = pattern;
             for (let i = 0; i < rows; i++) {
                 content += '<div style="display: flex;">';
                 for (let j = 0; j < rows; j++) {
                     switch (p) {
                         case 1:
                             if ((i - j) >= 0)
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px;">*</div>';
                             else
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900; color: white;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px; color: white;">*</div>';
                             break;
                         case 2:
                             if ((i + j) <= rows - 1)
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px;">*</div>';
                             else
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900; color: white;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px; color: white;">*</div>';
                             break;
                         case 3:
                             if ((i - j) <= 0)
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px;">*</div>';
                             else
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900; color: white;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px; color: white;">*</div>';
                             break;
                         case 4:
                             if ((i + j) >= rows - 1)
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px;">*</div>';
                             else
-                                content += '<div style="font-size: 30px; padding: 5px; font-weight: 900; color: white;">*</div>';
+                                content += '<div style="font-size: 30px; padding: 5px; color: white;">*</div>';
                             break;
                     }
                 }
